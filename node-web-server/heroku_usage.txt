@@ -1,0 +1,14 @@
+1. Go to toolbelt.heroku.com to download the client or command tool
+2. heroku --help  to install for the first time
+3. heroku login  to login to your heroku account
+4. Setup ssh keys, heroku keys:add to scan the keys automatically
+5. heroku keys to get a lists of keys and heroku keys:remove to remove keys
+6. Test ssh key connection with ssh -v git@heroku.com
+7. To deploy on heroku, we need to set the port dynamically
+const port = process.env.PORT || 3000; //heroku will set the PORT env variable
+8. Add the following in scripts in the package.json
+"start": "node server.js" //since heroku gonna call npm start to run your app
+9. Commit to heroku
+heroku create (This creates a new repo in heroku)
+git push heroku (To push the current local repo to heroku and deploy it)
+
